@@ -1,7 +1,7 @@
 # Facila Konekto
 ### Fonctions de connexion automatique en ssh ou telnet
-   version : 1.00 - Janvier 2024
-   auteur  : Thierry Le Gall
+    version : 1.00 - Janvier 2024
+    auteur  : Thierry Le Gall
     contact : facila@gmx.fr
     site    : https://github.com/facila/konekto
 
