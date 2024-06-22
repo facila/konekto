@@ -10,11 +10,9 @@
     3 : konekto_xterm.sh : ouverture d'une connexion dans une fenêtre xterm
     4 : konekto_debug.sh : utilisation de la connexion d'un autre utilisateur
 
-### 1 : konekto.pl
+### 1 : konekto.pl ADDRESS [OPTIONS]
     script perl avec utilisation du module Expect.pm
-    
-    konekto.pl ADDRESS -u USERNAME -p PASSWORD -l LOGIN -pr PROMPT_READ -pw PROMPT_WRITE -f FUNCTION -h
-    
+       
     OPTIONS :
     -u  USERNAME
     -p  PASSWORD
@@ -29,8 +27,7 @@
 
     vous pouvez créer des FUNCTION avec les commandes de Expect correspondant à votre environnement
 
-### 2 : konekto.sh
-    konekto.sh ADDRESS [OPTIONS]
+### 2 : konekto.sh ADDRESS [OPTIONS]
     OPTIONS : synthaxe identique à celle de konekto.pl
     USERNAME et PASSWORD sont recherchés dans $VAR/user
 
@@ -43,8 +40,7 @@
     - ajouter des FUNCTION et leurs fichiers associés si besoin
     - modifier les paramètres de l'appel à konekto.pl en conséquence
 
-### 3 : konekto_xterm.sh
-    konekto_xterm.sh NAME "COMMAND" ["XTERM"]
+### 3 : konekto_xterm.sh NAME "COMMAND" ["XTERM"]
     XTERM : couleurs , police et taille de la fenêtre
 
     exécution dans une fenêtre xterm de la connexion
@@ -55,8 +51,7 @@
     - $OUT permet de sauvegarder la connexion
     - $IN  permet à d'autres utilisateurs d'utiliser la même connexion
 
-### 4 : konekto_debug.sh
-    konekto_debug.sh ["XTERM"]
+### 4 : konekto_debug.sh ["XTERM"]
     XTERM : couleurs , police et taille de la fenêtre
 
     exécution dans une fenêtre xterm de la connexion d'un autre utilisateur avec la possibilité de l'utiliser ensemble
