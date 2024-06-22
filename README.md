@@ -12,7 +12,8 @@
 
 ### 1 : konekto.pl ADDRESS [OPTIONS]
     script perl avec utilisation du module Expect.pm
-       
+    
+    ADDRESS : adresse de la connexion
     OPTIONS :
     -u  USERNAME
     -p  PASSWORD
@@ -21,17 +22,18 @@
     -pw PROMPT_WRITE : valeur par défaut : # 
     -f  FUNCTION     : valeur par défaut : interact - autre : exécution de "FUNCTION".pm
     -h               : affichage de l'aide
-
+    
     la commande de connexion correspondant à LOGIN est définie dans $var/login
     vous pouvez en ajouter avec de nouveaux modes ou de nouvelles options 
-
+    
     vous pouvez créer des FUNCTION avec les commandes de Expect correspondant à votre environnement
 
 ### 2 : konekto.sh ADDRESS [OPTIONS]
+    ADDRESS : adresse de la connexion
     OPTIONS : synthaxe identique à celle de konekto.pl
-    USERNAME et PASSWORD sont recherchés dans $VAR/user
-
-    exécution de konekto.pl COMMAND
+    
+    USERNAME et PASSWORD : ils sont recherchés dans $VAR/user
+    COMMAND : génération de la commande pour l'exécution de : konekto.pl COMMAND
 
     pour une autre définition de USERNAME , PASSWORD , LOGIN , PROMPT_READ , PROMPT_WRITE et FUNCTION
     - copier konekto.sh en "myscript.sh"
@@ -41,7 +43,9 @@
     - modifier les paramètres de l'appel à konekto.pl en conséquence
 
 ### 3 : konekto_xterm.sh NAME "COMMAND" ["XTERM"]
-    XTERM : couleurs , police et taille de la fenêtre
+    NAME    : nom de l'equipement
+    COMMAND : commande qui sera passée à konekto.pl
+    XTERM   : couleurs , police et taille de la fenêtre
 
     exécution dans une fenêtre xterm de la connexion
 
