@@ -1,7 +1,7 @@
  # Facila Konekto
 
-  fonctions de connexion automatique ssh ou telnet
-
+  Fonctions de connexion automatique ssh ou telnet
+   ```
    version : 1.00 - Janvier 2024
    auteur  : Thierry Le Gall
    contact : facila@gmx.fr
@@ -11,8 +11,8 @@
   2 : konekto.sh       : ouverture d'une connexion à partir d'une adresse
   3 : konekto_xterm.sh : ouverture d'une connexion dans une fenêtre xterm
   4 : konekto_debug.sh : utilisation de la connexion d'un autre utilisateur
-
-  1 : konekto.pl ADDRESS -u USERNAME -p PASSWORD -l LOGIN -pr PROMPT_READ -pw PROMPT_WRITE -f FUNCTION -h
+```
+ ### 1 : konekto.pl ADDRESS -u USERNAME -p PASSWORD -l LOGIN -pr PROMPT_READ -pw PROMPT_WRITE -f FUNCTION -h
 
       script perl avec utilisation du module Expect.pm
 
@@ -30,7 +30,7 @@
 
       vous pouvez créer des FUNCTION avec les commandes de Expect correspondant à votre environnement
 
-  2 : konekto.sh ADDRESS [OPTIONS]
+### 2 : konekto.sh ADDRESS [OPTIONS]
 
       OPTIONS : synthaxe identique à celle de konekto.pl
       USERNAME et PASSWORD sont recherchés dans $VAR/user
@@ -44,7 +44,7 @@
       - ajouter des FUNCTION et leurs fichiers associés si besoin
       - modifier les paramètres de l'appel à konekto.pl en conséquence
 
-  3 : konekto_xterm.sh NAME "COMMAND" ["XTERM"]
+### 3 : konekto_xterm.sh NAME "COMMAND" ["XTERM"]
 
       XTERM : couleurs , police et taille de la fenêtre
 
@@ -56,7 +56,7 @@
       - $OUT permet de sauvegarder la connexion
       - $IN  permet à d'autres utilisateurs d'utiliser la même connexion
 
-  4 : konekto_debug.sh ["XTERM"]
+### 4 : konekto_debug.sh ["XTERM"]
 
       XTERM : couleurs , police et taille de la fenêtre
 
