@@ -1,7 +1,7 @@
 # Facila Konekto
 ### Fonctions de connexion automatique en ssh ou telnet
-    version : 1.00 - Janvier 2024
-    auteur  : Thierry Le Gall
+  version : 1.00 - Janvier 2024
+  auteur  : Thierry Le Gall
     contact : facila@gmx.fr
     site    : https://github.com/facila/konekto
 
@@ -15,13 +15,13 @@
     
     ADDRESS : adresse de la connexion
     OPTIONS :
-    -u  USERNAME
-    -p  PASSWORD
-    -l  LOGIN        : valeur par défaut : ssh      - autre : ssh ou telnet ou telnet_user
-    -pr PROMPT_READ  : valeur par défaut : >
-    -pw PROMPT_WRITE : valeur par défaut : # 
-    -f  FUNCTION     : valeur par défaut : interact - autre : exécution de "FUNCTION".pm
-    -h               : affichage de l'aide
+      -u  USERNAME
+      -p  PASSWORD
+      -l  LOGIN        : valeur par défaut : ssh      - autre : ssh ou telnet ou telnet_user
+      -pr PROMPT_READ  : valeur par défaut : >
+      -pw PROMPT_WRITE : valeur par défaut : # 
+      -f  FUNCTION     : valeur par défaut : interact - autre : exécution de "FUNCTION".pm
+      -h               : affichage de l'aide
     
     la commande de connexion correspondant à LOGIN est définie dans $var/login
     vous pouvez en ajouter avec de nouveaux modes ou de nouvelles options 
