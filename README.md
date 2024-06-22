@@ -10,9 +10,11 @@
     3 : konekto_xterm.sh : ouverture d'une connexion dans une fenêtre xterm
     4 : konekto_debug.sh : utilisation de la connexion d'un autre utilisateur
 
-### 1 : konekto.pl ADDRESS -u USERNAME -p PASSWORD -l LOGIN -pr PROMPT_READ -pw PROMPT_WRITE -f FUNCTION -h
+### 1 : konekto.pl
     script perl avec utilisation du module Expect.pm
-
+    
+    konekto.pl ADDRESS -u USERNAME -p PASSWORD -l LOGIN -pr PROMPT_READ -pw PROMPT_WRITE -f FUNCTION -h
+    
     OPTIONS :
     -u  USERNAME
     -p  PASSWORD
