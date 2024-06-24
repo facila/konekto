@@ -10,7 +10,7 @@
     3 : konekto_xterm.sh : ouverture d'une connexion dans une fenêtre xterm
     4 : konekto_debug.sh : utilisation de la connexion d'un autre utilisateur
 
-### installation de konekto
+### Installation de facila konekto
     vous devez avoir installé au préalable :
     - perl 
     - Expect.pm
