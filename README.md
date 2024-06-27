@@ -57,16 +57,14 @@
     - adapter la recherche de LOGIN , USERNAME et PASSWORD à votre environnement
     - ajouter des FUNCTION et leurs fichiers associés si besoin
 
-### 4 : konekto_xterm.sh NAME "COMMAND" ["XTERM"]
-    NAME    : nom de l'equipement
-    COMMAND : commande qui sera passée à konekto.pl
+### 4 : konekto_xterm.sh NAME "KONEKTO" ["XTERM"]
+    NAME    : nom de l'équipement
+    KONEKTO : paramètres de konekto.pl : LOGIN ADDRESS USERNAME PASSWORD FUNCTION
     XTERM   : couleurs , police et taille de la fenêtre
 
-    exécution dans une fenêtre xterm de la connexion
-
-    exécution de konekto.pl COMMAND
+    exécution de la connexion konekto.pl KONEKTO dans une fenêtre xterm
     - avec 2 fichiers temporaires $OUT et $IN
-    - $OUT permet de suivre le résultat des commandes d'une FUNCTION et d'agir en conséquence
+    - $OUT permet à partir d'autres scripts de suivre le résultat des commandes d'une FUNCTION et d'agir en conséquence
     - $OUT permet de sauvegarder la connexion
     - $IN  permet à d'autres utilisateurs d'utiliser la même connexion
 
@@ -74,7 +72,6 @@
     XTERM : couleurs , police et taille de la fenêtre
 
     exécution dans une fenêtre xterm de la connexion d'un autre utilisateur avec la possibilité de l'utiliser ensemble
-
     affichage de la liste des connexion en cours 
     sélection d'une connexion
     ouverture du terminal
