@@ -48,19 +48,14 @@
      vous pouvez créer des commandes avec de nouveaux modes ou de nouvelles options 
      vous pouvez créer des functions avec les commandes de Expect correspondant à votre environnement
 
-### 3 : konekto.sh ADDRESS [OPTIONS]
-    ADDRESS : adresse de la connexion
-    OPTIONS : synthaxe identique à celle de konekto.pl
-    
-    USERNAME et PASSWORD : ils sont recherchés dans $VAR/user
-    COMMAND : génération de la commande pour l'exécution de : konekto.pl COMMAND
+### 3 : konekto.sh ADDRESS 
+    USERNAME et PASSWORD sont recherchés dans $VAR/user
+    exécution de konekto.pl ssh ADDRESS USERNAME PASSWORD
 
-    pour une autre définition de USERNAME , PASSWORD , LOGIN , PROMPT_READ , PROMPT_WRITE et FUNCTION
+    pour une définition de LOGIN , USERNAME , PASSWORD et FUNCTION correspondants à d'autres critères 
     - copier konekto.sh en "myscript.sh"
-    - adapter la recherche de USERNAME et PASSWORD à votre environnement
-    - adapter la recherche de LOGIN , PROMPT_READ , PROMPT_WRITE si besoin
+    - adapter la recherche de LOGIN , USERNAME et PASSWORD à votre environnement
     - ajouter des FUNCTION et leurs fichiers associés si besoin
-    - modifier les paramètres de l'appel à konekto.pl en conséquence
 
 ### 4 : konekto_xterm.sh NAME "COMMAND" ["XTERM"]
     NAME    : nom de l'equipement
