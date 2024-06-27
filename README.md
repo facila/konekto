@@ -33,7 +33,15 @@
     si la variable globale $FACILA n'existe pas
     - elle est créée dans ~/.bashrc : "export FACILA=~/facila"
   
-### 1 : konekto.pl ADDRESS [OPTIONS]
+### 1 : kopio.pl COPY SOURCE TARGET PASSWORD
+
+    exemple : kopio.pl scp admin@192.168.1.254:startup-config "dir/file" "password"
+    exemple : kopio.pl scp "dir/file" admin@192.168.1.254:running-config "password"
+
+    script perl avec utilisation du module Expect.pm
+    COPY est défini dans $var/command
+
+### 2 : konekto.pl ADDRESS [OPTIONS]
     script perl avec utilisation du module Expect.pm
     
     ADDRESS : adresse de la connexion
@@ -51,7 +59,7 @@
     
     vous pouvez créer des FUNCTION avec les commandes de Expect correspondant à votre environnement
 
-### 2 : konekto.sh ADDRESS [OPTIONS]
+### 3 : konekto.sh ADDRESS [OPTIONS]
     ADDRESS : adresse de la connexion
     OPTIONS : synthaxe identique à celle de konekto.pl
     
@@ -65,7 +73,7 @@
     - ajouter des FUNCTION et leurs fichiers associés si besoin
     - modifier les paramètres de l'appel à konekto.pl en conséquence
 
-### 3 : konekto_xterm.sh NAME "COMMAND" ["XTERM"]
+### 4 : konekto_xterm.sh NAME "COMMAND" ["XTERM"]
     NAME    : nom de l'equipement
     COMMAND : commande qui sera passée à konekto.pl
     XTERM   : couleurs , police et taille de la fenêtre
@@ -78,7 +86,7 @@
     - $OUT permet de sauvegarder la connexion
     - $IN  permet à d'autres utilisateurs d'utiliser la même connexion
 
-### 4 : konekto_debug.sh ["XTERM"]
+### 5 : konekto_debug.sh ["XTERM"]
     XTERM : couleurs , police et taille de la fenêtre
 
     exécution dans une fenêtre xterm de la connexion d'un autre utilisateur avec la possibilité de l'utiliser ensemble
