@@ -1,5 +1,5 @@
 # Facila Konekto
-### Fonctions de connexion automatique en ssh ou telnet
+### Fonctions de copy et de connection automatique en scp , ssh ou telnet
     version : 1.00 - Janvier 2024
     auteur  : Thierry Le Gall
     contact : facila@gmx.fr
@@ -34,30 +34,19 @@
     - elle est créée dans ~/.bashrc : "export FACILA=~/facila"
   
 ### 1 : kopio.pl COPY SOURCE TARGET PASSWORD
-
     exemple : kopio.pl scp admin@192.168.1.254:startup-config "dir/file" "password"
     exemple : kopio.pl scp "dir/file" admin@192.168.1.254:running-config "password"
 
     script perl avec utilisation du module Expect.pm
     COPY est défini dans $var/command
 
-### 2 : konekto.pl ADDRESS [OPTIONS]
-    script perl avec utilisation du module Expect.pm
-    
-    ADDRESS : adresse de la connexion
-    OPTIONS :
-      -u  USERNAME
-      -p  PASSWORD
-      -l  LOGIN        : valeur par défaut : ssh      - autre : ssh ou telnet ou telnet_user
-      -pr PROMPT_READ  : valeur par défaut : >
-      -pw PROMPT_WRITE : valeur par défaut : # 
-      -f  FUNCTION     : valeur par défaut : interact - autre : exécution de "FUNCTION".pm
-      -h               : affichage de l'aide
-    
-    la commande de connexion correspondant à LOGIN est définie dans $var/login
-    vous pouvez en ajouter avec de nouveaux modes ou de nouvelles options 
-    
-    vous pouvez créer des FUNCTION avec les commandes de Expect correspondant à votre environnement
+### 2 : konekto.pl LOGIN ADDRESS USERNAME PASSWORD [FUNCTION]
+     exemple : konekto.pl ssh 192.168.1.254 admin "password"
+
+     script perl avec utilisation du module Expect.pm
+     la commande de connexion correspondant à LOGIN et le PROMPT sont définis dans $var/command
+     vous pouvez créer des commandes avec de nouveaux modes ou de nouvelles options 
+     vous pouvez créer des functions avec les commandes de Expect correspondant à votre environnement
 
 ### 3 : konekto.sh ADDRESS [OPTIONS]
     ADDRESS : adresse de la connexion
