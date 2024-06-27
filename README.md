@@ -5,10 +5,11 @@
     contact : facila@gmx.fr
     site    : https://github.com/facila/konekto
 
-    1 : konekto.pl       : fonction de connexion automatique en ssh ou telnet
-    2 : konekto.sh       : ouverture d'une connexion à partir d'une adresse
-    3 : konekto_xterm.sh : ouverture d'une connexion dans une fenêtre xterm
-    4 : konekto_debug.sh : utilisation de la connexion d'un autre utilisateur
+    1 : kopio.pl         : fonction de copy automatique en scp
+    2 : konekto.pl       : fonction de connexion automatique en ssh ou telnet
+    3 : konekto.sh       : ouverture d'une connexion à partir d'une adresse
+    4 : konekto_xterm.sh : ouverture d'une connexion dans une fenêtre xterm
+    5 : konekto_debug.sh : utilisation de la connexion d'un autre utilisateur
 
 ### Installation de facila konekto
     vous devez avoir installé au préalable :
