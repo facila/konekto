@@ -44,7 +44,7 @@
      exemple : konekto.pl ssh 192.168.1.254 admin "password"
 
      script perl avec utilisation du module Expect.pm
-     la commande de connexion correspondant à LOGIN et le PROMPT sont définis dans $var/command
+     le PROMPT , la COMMAND et le MODE de connexion correspondant à LOGIN sont définis dans $var/command
      vous pouvez créer des commandes avec de nouveaux modes ou de nouvelles options 
      vous pouvez créer des functions avec les commandes de Expect correspondant à votre environnement
 
