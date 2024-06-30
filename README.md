@@ -16,7 +16,7 @@
     - perl 
     - Expect.pm
 
-    téléchargez kreo à partir de github :
+    téléchargez konekto à partir de github :
     - cliquez sur : Code
     - cliquez sur : Download ZIP
 
