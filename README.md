@@ -14,7 +14,10 @@
 ### Installation de facila konekto
     vous devez avoir installé au préalable :
     - perl 
+      apt-get install perl
     - Expect.pm
+      apt-get install perl-modules
+      cpan Expect.pm
 
     téléchargez konekto à partir de github :
     - cliquez sur : Code
