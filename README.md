@@ -1,6 +1,6 @@
 # Facila Konekto
 ### Fonctions de copie et de connexion automatique en scp , ssh ou telnet
-    version : 1.32 Juin 2025
+    version : 1.10 Juin 2025
     auteur  : Thierry Le Gall
     contact : facila@gmx.fr
     site    : https://github.com/facila/konekto
@@ -26,7 +26,7 @@
     l'installation se fait dans le répertoire de l'utilisateur
     tapez les commandes suivantes :
       MAIN=konekto-main
-      TAR=konekto.v1.32.tar.gz
+      TAR=konekto.v1.10.tar.gz
       DIR="nom du répertoire où se trouve le fichier téléchargé : $MAIN.zip"
       cd
       mv $DIR/$MAIN.zip .
