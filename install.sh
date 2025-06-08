@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# version 1.00 janvier 2024
+# version 1.10 Juin 2025
 # sh install.sh FICHIER
 
 proc_exit ()
