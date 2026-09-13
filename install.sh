@@ -1,15 +1,16 @@
 #!/bin/bash
 
-# version 1.10 Juin 2025
-# sh install.sh FICHIER
+# version 2.00 Septembre 2026
+# sh install.sh FILE
 
-proc_exit ()
+check ()
 {
-perl -e "$1" 2>/dev/null
-[ $? != "0" ] && { echo "  vous devez d'abbord installer : $2" ; exit ; }
+local error="$1"
+shift
+"$@" 2>/dev/null || { echo "  vous devez d'abord installer : $error" ; exit ; }
 }
 
-#################################################################################
+###############################################################################
 
  FILE=$1
 APPLI=`echo $FILE | cut -f1 -d.`
@@ -21,10 +22,7 @@ FILE=$DIR/$FILE
 [ ! -s "$FILE"       ] && { echo "fichier $FILE absent" ; exit ; }
 
 echo "vérification des dépendances"
-proc_exit '' perl
-proc_exit 'use Expect' Expect.pm
-proc_exit 'use IO::Pty'
-proc_exit 'use IO::Tty' 
+. check.sh
 
 echo "verification de facila"
 if [ "$FACILA" = "" ]
