@@ -19,23 +19,8 @@
       apt-get install perl-modules
       cpan Expect.pm
 
-    téléchargez konekto à partir de github :
-    - cliquez sur : Code
-    - cliquez sur : Download ZIP
+    voir facila/install README.md
 
-    l'installation se fait dans le répertoire de l'utilisateur
-    tapez les commandes suivantes :
-      MAIN=konekto-main
-      TAR=konekto.v1.10.tar.gz
-      DIR="nom du répertoire où se trouve le fichier téléchargé : $MAIN.zip"
-      cd
-      mv $DIR/$MAIN.zip .
-      unzip $MAIN.zip
-      sh $MAIN/install.sh $TAR
-
-    si la variable globale $FACILA n'existe pas
-    - elle est créée dans ~/.bashrc : "export FACILA=~/facila"
-  
 ### 1 : kopio.pl COPY SOURCE TARGET PASSWORD
     exemple : kopio.pl scp admin@192.168.1.254:startup-config "dir/file" "password"
     exemple : kopio.pl scp "dir/file" admin@192.168.1.254:running-config "password"
