@@ -1,5 +1,5 @@
 # Facila Konekto
-### Fonctions de copie et de connexion automatique en scp , ssh ou telnet
+### Fonctions de copie , de connexion automatique , de sauvegarde et de téléchargement en scp , ssh ou telnet
     version : 2.00 Septembre 2026
     auteur  : Thierry Le Gall
     contact : facila@gmx.fr
