@@ -10,7 +10,7 @@
     3 : konekto.sh       : ouverture d'une connexion à partir d'une adresse
     4 : konekto_xterm.sh : ouverture d'une connexion dans une fenêtre xterm
     5 : konekto_debug.sh : utilisation de la connexion d'un autre utilisateur
-    6 : sendo.pl         : script de sauvegarde et de téléchargement d'équipements réseau fonctionnant en mode running et startup
+    6 : sendo.sh         : script de sauvegarde et de téléchargement d'équipements réseau fonctionnant en mode running et startup
 
 ### Installation de facila konekto
     vous devez avoir installé au préalable :
