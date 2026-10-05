@@ -1,6 +1,6 @@
 # Facila Konekto
 ### Fonctions de copie , de connexion automatique , de sauvegarde et de téléchargement en scp , ssh ou telnet
-    version : 2.00 Septembre 2026
+    version : 2.00 Octobre 2026
     auteur  : Thierry Le Gall
     contact : facila@gmx.fr
     site    : https://github.com/facila/konekto
@@ -56,11 +56,12 @@
      - adapter la recherche de FUNCTION , USERNAME et PASSWORD à votre environnement
      - ajouter des COMMAND et leurs fichiers associés si besoin
 
- 4 : konekto_xterm.sh NAME "KONEKTO" ["XTERM"]
+ 4 : konekto_xterm.sh "CONFIRM" NAME "KONEKTO" ["XTERM"]
 
-     NAME    : nom de l'équipement
-     KONEKTO : paramètres de konekto.pl : FUNCTION ADDRESS USERNAME PASSWORD COMMAND
-     XTERM   : couleurs , police et taille de la fenêtre
+     CONFIRM  : message de confirmation de l'opération
+     NAME     : nom de l'équipement
+     KONEKTO  : paramètres de konekto.pl : FUNCTION ADDRESS USERNAME PASSWORD COMMAND
+     XTERM    : couleurs , police et taille de la fenêtre
 
      exécution de la connexion konekto.pl KONEKTO dans une fenêtre xterm
      - avec 2 fichiers temporaires $OUT et $IN
@@ -81,13 +82,14 @@
 
      $1 = SAVE  : sauvegarde de la configuration dans l'équipement + puis sur le serveur :          "KONEKTO" "KOPIO2" 
      $1 = RUN   : téléchargement d'une configuration en running + sauvegarde ( save )    : "KOPIO1" "KONEKTO" "KOPIO2"
-     $1 = START : téléchargement d'une configuration en startup + reboot ?               : "KOPIO1" "KONEKTO"
+     $1 = START : téléchargement d'une configuration en startup                          : "KOPIO1"
 
      exécution de sendo.sh , dans une fenêtre xterm si XTERM
-     $1 = FUNCTION : save , run ou start en minuscules avec XTERM
-     $1 = FUNCTION : SAVE , RUN ou START en majuscules sans XTERM
-     $2 = NAME     : nom de l'équipement pour le titre de xterm
-     $2 = KOPIO1   : paramètre de kopio.pl   :
-     $3 = KONEKTO  : paramètre de konekto.pl :
-     $4 = KOPIO2   : paramètre de kopio.pl   :
-     $6 = XTERM    : couleurs , police et taille de la fenêtre
+
+     FUNCTION : run ou start ou save en minuscules : exécution de sendo.sh avec fenêtre xterm 
+     FUNCTION : RUN ou START ou SAVE en majuscules : exécution de sendo.sh sans fenêtre xterm
+     NAME     : nom de l'équipement
+     KOPIO1   : si RUN ou START , paramètres de kopio.pl pour téléchargement dans l'équipement
+     KONEKTO  : si RUN ou SAVE  , paramètres de konekto.pl pour sauvegarde dans l'équipement
+     KOPIO2   : si RUN ou SAVE  , paramètres de kopio.pl pour sauvegarde sur le serveur
+     XTERM    : si run ou start ou save , paramètres xterm : couleurs , police et taille de la fenêtre
