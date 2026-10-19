@@ -86,7 +86,7 @@
     sélection d'une connexion
     ouverture du terminal
 
-7 : sendo.sh FUNCTION NAME MARK USER DIR SOURCE COPY LOGIN ADDRESS USERNAME PASSWORD
+7 : sendo.sh FUNCTION NAME MARK USER DIRECTORY SOURCE COPY LOGIN ADDRESS USERNAME PASSWORD
 
     FUNCTION = save  : sauvegarde de la configuration dans l'équipement + puis sur le serveur
     FUNCTION = run   : téléchargement d'une configuration en running + sauvegarde ( save )
@@ -94,7 +94,7 @@
     NAME             : nom de l'équipement
     MARK             : marque de l'équipement
     USER             : utilisateur
-    DIR              : répertoire pour les sauvegardes
+    DIRECTOR         : répertoire pour les sauvegardes
     SOURCE           : fichier à télécharger pour run ou start 
     COPY             : mode de copy de l'équipement
     LOGIN ADDRESS USERNAME PASSWORD : paramétres pour kopio.pl et konekto.pl
