@@ -24,78 +24,78 @@
 
     voir facila/install README.md
 
-  1 : kopio.pl FUNCTION SOURCE TARGET PASSWORD
+1 : kopio.pl FUNCTION SOURCE TARGET PASSWORD
 
-     exemple : kopio.pl scp admin@192.168.1.254:startup-config "dir/file" "password"
-     exemple : kopio.pl scp "dir/file" admin@192.168.1.254:running-config "password"
+    exemple : kopio.pl scp admin@192.168.1.254:startup-config "dir/file" "password"
+    exemple : kopio.pl scp "dir/file" admin@192.168.1.254:running-config "password"
 
-     script perl avec utilisation du module Expect.pm
-     COPY est défini dans data/config
+    script perl avec utilisation du module Expect.pm
+    COPY est défini dans data/config
 
- 2 : konekto.pl FUNCTION ADDRESS USERNAME PASSWORD [COMMAND]
+2 : konekto.pl FUNCTION ADDRESS USERNAME PASSWORD [COMMAND]
 
-     exemple : konekto.pl ssh 192.168.1.254 admin "password"
+    exemple : konekto.pl ssh 192.168.1.254 admin "password"
 
-     script perl avec utilisation du module Expect.pm
-     le PROMPT , la COMMAND et le MODE de connexion correspondant à FUNCTION sont définis dans data/config
-     vous pouvez créer des fonctions de login avec de nouveaux modes ou de nouvelles options
+    script perl avec utilisation du module Expect.pm
+    le PROMPT , la COMMAND et le MODE de connexion correspondant à FUNCTION sont définis dans data/config
+    vous pouvez créer des fonctions de login avec de nouveaux modes ou de nouvelles options
 
-     COMMAND est optionel et à plusieurs formats pour envoyer des commandes
-     vous pouvez créer des commandes correspondant à votre environnement
-     - un fichier de commandes dans data
-     - des commandes numérotées xxxx dans data/command
-     - une liste de commandes séparées par des ;
+    COMMAND est optionel et à plusieurs formats pour envoyer des commandes
+    vous pouvez créer des commandes correspondant à votre environnement
+    - un fichier de commandes dans data
+    - des commandes numérotées xxxx dans data/command
+    - une liste de commandes séparées par des ;
 
- 3 : konekto.sh "CONFIRM" "NAME" "KONEKTO"
+3 : konekto.sh "CONFIRM" "NAME" "KONEKTO"
 
-     CONFIRM  : message de confirmation de l'opération
-     NAME     : nom de l'équipement
-     KONEKTO  : paramètres de konekto.pl : FUNCTION ADDRESS USERNAME PASSWORD COMMAND
+    CONFIRM  : message de confirmation de l'opération
+    NAME     : nom de l'équipement
+    KONEKTO  : paramètres de konekto.pl : FUNCTION ADDRESS USERNAME PASSWORD COMMAND
 
-     exécution de la connexion konekto.pl KONEKTO
-     - avec 2 fichiers temporaires $OUT et $IN
-     - $OUT permet à partir d'autres scripts de suivre le résultat des commandes et d'agir en conséquence
-     - $OUT permet de sauvegarder la connexion
-     - $IN  permet à d'autres utilisateurs d'utiliser la même connexion
+    exécution de la connexion konekto.pl KONEKTO
+    - avec 2 fichiers temporaires $OUT et $IN
+    - $OUT permet à partir d'autres scripts de suivre le résultat des commandes et d'agir en conséquence
+    - $OUT permet de sauvegarder la connexion
+    - $IN  permet à d'autres utilisateurs d'utiliser la même connexion
 
- 4 : konekto_xterm.sh "XTERM" "CONFIRM" NAME "KONEKTO"
+4 : konekto_xterm.sh "XTERM" "CONFIRM" NAME "KONEKTO"
 
-     XTERM   : couleurs , police et taille de la fenêtre
-     CONFIRM : message de confirmation de l'opération
-     NAME    : nom de l'équipement
-     KONEKTO : paramètres de konekto.sh : FUNCTION ADDRESS USERNAME PASSWORD COMMAND
+    XTERM   : couleurs , police et taille de la fenêtre
+    CONFIRM : message de confirmation de l'opération
+    NAME    : nom de l'équipement
+    KONEKTO : paramètres de konekto.sh : FUNCTION ADDRESS USERNAME PASSWORD COMMAND
 
- 5 : konekto_ssh.sh ADDRESS USERNAME
+5 : konekto_ssh.sh ADDRESS USERNAME
 
-     FUNCTION : ssh
-     PASSWORD : est recherché dans data/user
-     COMMAND  : est vide
-     exécution de : konekto.pl FUNCTION ADDRESS USERNAME PASSWORD COMMAND , donc konekto.pl ssh ADDRESS USERNAME PASSWORD
+    FUNCTION : ssh
+    PASSWORD : est recherché dans data/user
+    COMMAND  : est vide
+    exécution de : konekto.pl FUNCTION ADDRESS USERNAME PASSWORD COMMAND , donc konekto.pl ssh ADDRESS USERNAME PASSWORD
 
-     pour une définition de FUNCTION , USERNAME , PASSWORD et COMMAND correspondants à d'autres critères 
-     - copier konekto_ssh.sh en "myscript.sh"
-     - adapter la recherche de FUNCTION , USERNAME et PASSWORD à votre environnement
-     - ajouter des COMMAND et leurs fichiers associés si besoin
+    pour une définition de FUNCTION , USERNAME , PASSWORD et COMMAND correspondants à d'autres critères 
+    - copier konekto_ssh.sh en "myscript.sh"
+    - adapter la recherche de FUNCTION , USERNAME et PASSWORD à votre environnement
+    - ajouter des COMMAND et leurs fichiers associés si besoin
 
- 6 : konekto_debug.sh ["XTERM"]
+6 : konekto_debug.sh ["XTERM"]
 
-     XTERM : couleurs , police et taille de la fenêtre
+    XTERM : couleurs , police et taille de la fenêtre
 
-     exécution dans une fenêtre xterm de la connexion d'un autre utilisateur avec la possibilité de l'utiliser ensemble
-     affichage de la liste des connexion en cours 
-     sélection d'une connexion
-     ouverture du terminal
+    exécution dans une fenêtre xterm de la connexion d'un autre utilisateur avec la possibilité de l'utiliser ensemble
+    affichage de la liste des connexion en cours 
+    sélection d'une connexion
+    ouverture du terminal
 
- 7 : sendo.sh FUNCTION NAME USER DATA MARK SOURCE COPY LOGIN ADDRESS USERNAME PASSWORD
+7 : sendo.sh FUNCTION NAME USER DATA MARK SOURCE COPY LOGIN ADDRESS USERNAME PASSWORD
 
-     FUNCTION = save  : sauvegarde de la configuration dans l'équipement + puis sur le serveur
-     FUNCTION = run   : téléchargement d'une configuration en running + sauvegarde ( save )
-     FUNCTION = start : téléchargement d'une configuration en startup
+    FUNCTION = save  : sauvegarde de la configuration dans l'équipement + puis sur le serveur
+    FUNCTION = run   : téléchargement d'une configuration en running + sauvegarde ( save )
+    FUNCTION = start : téléchargement d'une configuration en startup
 
-     utilisé dans l'outil reto de gestion d'équipements réseau
+    utilisé dans l'outil reto de gestion d'équipements réseau
 
- 8 : sendo_xterm.sh "XTERM" FUNCTION NAME PARAMETRES
+8 : sendo_xterm.sh "XTERM" FUNCTION NAME PARAMETRES
 
-     XTERM      : paramétres xterm : couleurs , police et taille de la fenêtre
+    XTERM      : paramétres xterm : couleurs , police et taille de la fenêtre
      NAME       : nom de l'équipement
      PARAMETRES : paramétres pour sendo.sh
