@@ -94,7 +94,7 @@
     NAME             : nom de l'équipement
     MARK             : marque de l'équipement
     USER             : utilisateur
-    DIRECTOR         : répertoire pour les sauvegardes
+    DIRECTORY        : répertoire pour les sauvegardes
     SOURCE           : fichier à télécharger pour run ou start 
     COPY             : mode de copy de l'équipement
     LOGIN ADDRESS USERNAME PASSWORD : paramétres pour kopio.pl et konekto.pl
