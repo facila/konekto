@@ -24,6 +24,8 @@
 
     voir facila/install README.md
 
+    pour sendo.sh , vous devez installer facila sxabloni
+
 1 : kopio.pl FUNCTION SOURCE TARGET PASSWORD
 
     exemple : kopio.pl scp admin@192.168.1.254:startup-config "dir/file" "password"
