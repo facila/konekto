@@ -11,8 +11,6 @@
     4 : konekto_xterm.sh : exécution de konekto.sh dans une fenêtre xterm
     5 : konekto_ssh.sh   : exécution de konekto.pl en mode ssh ( exemple de personnalisation d'un script de connexion )
     6 : konekto_debug.sh : utilisation de la connexion d'un autre utilisateur
-    7 : sendo.sh         : fonction de sauvegarde et de téléchargement d'équipements réseau fonctionnant en mode running et startup
-    8 : sendo_xterm.sh   : exécution de sendo.sh dans une fenêtre xterm
 
 ### Installation de facila konekto
     vous devez avoir installé au préalable :
@@ -23,8 +21,6 @@
       cpan Expect.pm
 
     voir facila/install README.md
-
-    pour sendo.sh , vous devez installer facila sxabloni
 
 1 : kopio.pl FUNCTION SOURCE TARGET PASSWORD
 
@@ -87,24 +83,3 @@
     affichage de la liste des connexion en cours 
     sélection d'une connexion
     ouverture du terminal
-
-7 : sendo.sh FUNCTION NAME MARK USER DIRECTORY SOURCE COPY LOGIN ADDRESS USERNAME PASSWORD
-
-    FUNCTION = save  : sauvegarde de la configuration dans l'équipement + puis sur le serveur
-    FUNCTION = run   : téléchargement d'une configuration en running + sauvegarde ( save )
-    FUNCTION = start : téléchargement d'une configuration en startup
-    NAME             : nom de l'équipement
-    MARK             : marque de l'équipement
-    USER             : utilisateur
-    DIRECTORY        : répertoire pour les sauvegardes
-    SOURCE           : fichier à télécharger pour run ou start 
-    COPY             : mode de copy de l'équipement
-    LOGIN ADDRESS USERNAME PASSWORD : paramétres pour kopio.pl et konekto.pl
-
-    utilisé dans l'outil reto de gestion d'équipements réseau
-
-8 : sendo_xterm.sh "XTERM" FUNCTION NAME PARAMETRES
-
-    XTERM      : paramétres xterm : couleurs , police et taille de la fenêtre
-    NAME       : nom de l'équipement
-    PARAMETRES : paramétres pour sendo.sh
